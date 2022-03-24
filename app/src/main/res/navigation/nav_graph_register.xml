@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstRegisterFragment">
+
+    <fragment
+        android:id="@+id/firstRegisterFragment"
+        android:name="com.example.fourpay.fragments.FirstRegisterFragment"
+        android:label="fragment_first_register"
+        tools:layout="@layout/fragment_first_register" >
+        <action
+            android:id="@+id/action_firstRegisterFragment_to_secondRegisterFragment"
+            app:destination="@id/secondRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondRegisterFragment"
+        android:name="com.example.fourpay.fragments.SecondRegisterFragment"
+        android:label="fragment_second_register"
+        tools:layout="@layout/fragment_second_register" >
+        <action
+            android:id="@+id/action_secondRegisterFragment_to_thirdSecondRegister"
+            app:destination="@id/thirdSecondRegister" />
+        <action
+            android:id="@+id/action_secondRegisterFragment_to_firstRegisterFragment"
+            app:destination="@id/firstRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdSecondRegister"
+        android:name="com.example.fourpay.fragments.ThirdRegisterFragment"
+        android:label="fragment_third_second_register"
+        tools:layout="@layout/fragment_third_register" >
+        <action
+            android:id="@+id/action_thirdSecondRegister_to_fourthRegisterFragment"
+            app:destination="@id/fourthRegisterFragment" />
+        <action
+            android:id="@+id/action_thirdSecondRegister_to_secondRegisterFragment"
+            app:destination="@id/secondRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthRegisterFragment"
+        android:name="com.example.fourpay.fragments.ThirdRegisterFragment"
+        android:label="fragment_fourth_register"
+        tools:layout="@layout/fragment_third_register" >
+        <action
+            android:id="@+id/action_fourthRegisterFragment_to_thirdSecondRegister"
+            app:destination="@id/thirdSecondRegister" />
+    </fragment>
+</navigation>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fourpay.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_configuracaoFragment"
+            app:destination="@id/configuracaoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_depositoFragment"
+            app:destination="@id/depositoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuracaoFragment"
+        android:name="com.example.fourpay.fragments.ConfiguracaoFragment"
+        android:label="fragment_configuracao"
+        tools:layout="@layout/fragment_configuracao" >
+        <action
+            android:id="@+id/action_configuracaoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/depositoFragment"
+        android:name="com.example.fourpay.fragments.DepositoFragment"
+        android:label="DepositoFragment" >
+        <action
+            android:id="@+id/action_depositoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_depositoFragment_to_pagamentoConfirmacaoFragment"
+            app:destination="@id/pagamentoConfirmacaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/senhaFragment"
+        android:name="com.example.fourpay.SenhaFragment"
+        android:label="fragment_senha"
+        tools:layout="@layout/fragment_senha" />
+    <fragment
+        android:id="@+id/pagamentoConfirmacaoFragment"
+        android:name="com.example.fourpay.fragments.PagamentoConfirmacaoFragment"
+        android:label="PagamentoConfirmacaoFragment" >
+        <action
+            android:id="@+id/action_pagamentoConfirmacaoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
