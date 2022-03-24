@@ -1,5 +1,3 @@
-# Four_pay
-
 # FourPay
 
 <div align="center">
